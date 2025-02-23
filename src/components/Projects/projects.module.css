@@ -1,0 +1,125 @@
+.projects {
+  padding: 6rem 2rem;
+  background: white;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #333;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cardWrapper {
+  perspective: 1500px;
+  cursor: pointer;
+  height: 400px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+.content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.content p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.backContent {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+  color: white;
+}
+
+.backContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.backContent p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+.viewButton {
+  background: white;
+  color: #4ecdc4;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.viewButton:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .cardWrapper {
+    height: 350px;
+  }
+}
